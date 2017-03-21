@@ -1,9 +1,9 @@
-IF "%1" == "-rf" (
-  RMDIR %2 /s /q
+@IF "%1" == "-rf" (
+	rmdir /s /q %2 %3 %4 %5 %6 %7 %8 %9
 ) ELSE (
-  IF "%1" == "-r" (
-    RMDIR %2 /s
-  ) ELSE (
-    DEL %1
-  )
+	IF "%1" == "-r" (
+		rmdir /s %2 %3 %4 %5 %6 %7 %8 %9
+	) ELSE (
+		del %*
+	)
 )
